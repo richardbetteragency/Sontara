@@ -30,10 +30,11 @@
 		<div id="error-message" style="display: none;" class="error-message"><?= $_GET['error_message'] ?></div>
 
 		<header>
-			<a href="/">
+			<a href="/" style="width: 26%;">
 				<img src="/wp-content/themes/sontara/images/sontara-logo.svg" alt="sontara-logo">
 			</a>
-			<h1>Talk to the experts as <a href="https://harrisonwipes.co.uk" target="_blank">harrisonwipes.co.uk</a></h1>
+			<h1 class="desktop">Talk to the experts at <a href="https://harrisonwipes.co.uk" target="_blank">harrisonwipes.co.uk</a></h1>
+			<a href="https://harrisonwipes.co.uk" class="mobile" target="_blank"><i class="fa fa-globe fa-9x" style="font-size: 2.5em;"></i></a>
 		</header>
 
 	<div id="content" class="site-content">

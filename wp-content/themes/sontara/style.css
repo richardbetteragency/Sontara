@@ -27,11 +27,8 @@ header {
 }
 
 header a {
-  width: 26%;
-}
-
-header a {
   text-decoration: none;
+  color: #203567;
 }
 
 body {
@@ -40,26 +37,37 @@ body {
 }
 
 .content__section h1 {
-  font-size: 76px;
+  font-size: 40px;
+  font-family: 'futura medium';
+  color: #203567;
+}
+
+.content__section h2 {
+  font-size: 32px;
   font-family: 'futura medium';
   color: #203567;
 }
 
 .footer-section .fa-envelope {
-  font-size: 3em;
+  font-size: 1.7em;
 }
 
 .footer-section .fa-phone {
-  font-size: 4em;
+  font-size: 2em;
 }
 
 .footer-section .fa-external-link {
-  font-size: 4em;
+  font-size: 2em;
+}
+
+.footer-section .footer__logo {
+  margin-top: 40px;
+
 }
 
 .site-footer {
   background-color: #203567;
-  padding: 30px 5%;
+  padding: 30px 15%;
   display: grid;
   grid-template-columns: auto auto;
   color: #fff;
@@ -76,8 +84,8 @@ body {
 }
 
 .site-footer p {
-  margin: 10px 0px 17px 18px;
-  font-size: 40px;
+  margin: 10px 0px 13px 10px;
+  font-size: 26px;
 }
 
 .site-footer a {
@@ -86,7 +94,7 @@ body {
 }
 
 .site-footer h2 {
-  font-size: 50px;
+  font-size: 40px;
 }
 
 .white-text {
@@ -94,13 +102,13 @@ body {
 }
 
 .content__section h1 {
-  font-size: 76px;
+  /* font-size: 76px; */
   font-family: 'futura medium';
   color: #203567;
 }
 
 .content__section {
-  padding: 100px 5%;
+  padding: 75px 15%;
   display: grid;
 }
 
@@ -111,15 +119,15 @@ body {
 }
 
 .content__section__p {
-  font-size: 43px;
-  padding: 0px 9% 15px;
+  font-size: 26px;
+  padding: 0px 0% 15px;
   margin-top: 10px;
-  font-weight: 600;
+  /* font-weight: 600; */
 
 }
 
 .error-message {
-  padding: 20px;
+  padding: 20px 2px;
   background-color: #e3b8b8;
   color: #ab0707;
   text-align: center;
@@ -129,11 +137,11 @@ body {
 }
 
 .video__section {
-  padding: 10px 5% 133px !important;
+  padding: 10px 15% 133px !important;
 }
 
 .column__container h3 {
-  font-size: 48px;
+  font-size: 32px;
   color: #203567;
   font-family: 'futura heavy';
   font-weight: 100;
@@ -141,17 +149,19 @@ body {
 }
 
 .column__container p {
-  font-size: 40px;
+  font-size: 26px;
 }
 
 .column__container img {
-  width: 30%;
+  width: 24%;
 }
 
 .flex {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  /* margin: 0px 50px; */
+  padding: 25px 0%;
 }
 
 .caret-right {
@@ -163,7 +173,7 @@ body {
 
 .column__container {
   width: 33%;
-  min-width: 391px;
+  /* min-width: 391px; */
   margin-bottom: 40px;
 }
 
@@ -184,9 +194,9 @@ body {
 }
 
 .content__section li {
-  font-size: 43px;
-  padding-bottom: 55px;
-  font-weight: 600;
+  font-size: 26px;
+  padding-bottom: 38px;
+  /* font-weight: 600; */
 }
 
 .centered {
@@ -194,12 +204,14 @@ body {
 }
 
 .blue-banner {
-  height: 260px;
+  /* height: 260px; */
   background-color: #203567;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 50% 50%;
   align-items: center;
   justify-content: space-around;
+  margin: 30px 0px;
+  padding: 0px 12%;
 }
 
 .footer-section img[alt=facebook-icon] {
@@ -234,7 +246,8 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  height: 194px;
+  /* height: 194px; */
+  margin-top: 7px;
 }
 
 .content__section__p-email {
@@ -247,7 +260,38 @@ body {
   margin: 20px;
 }
 
+
+@media (min-width: 1001px) {
+  .mobile {
+    display: none !important;
+  }
+}
+
 @media (max-width: 1000px) {
+  .blue-banner-2 {
+    padding: 20px 5% 30px !important;
+  }
+  .blue-banner-2 h2 {
+    font-size: 28px !important;
+    display: block !important;
+  }
+  .social-icon__section a i {
+    font-size: 2em !important;
+    padding: 5px !important;
+  }
+
+  .social-icon__section {
+    height: 85px;
+  }
+
+  .r-class {
+    font-size: 23px !important;
+    padding-right: 0px !important;
+  }
+
+  .desktop {
+    display: none !important;
+  }
   #submit-order {
     padding: 11px 25px !important;
     font-size: 18px !important;
@@ -279,51 +323,49 @@ body {
   .content__section__p p {
     font-size: 22px;
   }
-  .half-width-section {
-    grid-template-columns: auto !important;
-  }
   .footer-section .fa-envelope {
-    font-size: 2em !important;
+    font-size: 0.8em !important;
+    margin-top: 8px;
   }
   .site-footer ul {
     padding-left: 4px;
   }
   .footer-section .fa-phone {
-    font-size: 3em !important;
+    font-size: 1em !important;
+    margin-top: 4px;
   }
   .footer-section .fa-external-link {
-    font-size: 2em !important;
+    font-size: 0.8em !important;
+    margin-top: 8px !important;
   }
   .site-footer p {
-    font-size: 23px !important;
+    font-size: 13px !important;
+    margin: 10px 0px 3px 7px;
   }
+  .footer__logo {
+    margin-top: 11px !important;
+  }
+
   .blue-banner {
-    grid-template-columns: auto;
-    margin-top: 27px !important;
-  }
-  .blue-banner a {
-    font-size: 19px !important;
-    padding: 13px 18px !important;
+    padding: 0;
   }
 
   .pages__container img {
-    max-width: 329px !important;
-  }
-
-  .pages__container a {
-    width: 221px !important;
+    max-width: 250px !important;
+    width: 80% !important;
   }
 
   #order-form h2 {
-    font-size: 31px !important;
+    font-size: 26px !important;
+    padding: 0 !important;
   }
 
-  .form-section input[type=text], input[type=number], input[type=email] {
-    font-size: 21px !important;
-    border-radius: 10px !important;
-    margin: 11px !important;
-    padding: 16px !important;
-  }
+  /* .form-section input[type=text], input[type=number], input[type=email] {
+    font-size: 11px !important;
+    border-radius: 6px !important;
+    margin: 3px !important;
+    padding: 9px !important;
+  } */
 
   #order-form input[type=submit] {
     font-size: 18px !important;
@@ -334,11 +376,16 @@ body {
   }
 
   .content__section h1 {
-    font-size: 26px;
+    font-size: 35px !important;
+    display: block !important;
   }
 
   .content__section li {
-    font-size: 21px;
+    font-size: 22px;
+  }
+
+  .content__section ul li::before {
+    margin-right: 9px !important;
   }
 
   header h1 {
@@ -350,11 +397,108 @@ body {
   }
 
   .site-footer h2 {
-    font-size: 39px !important;
+    font-size: 15px !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .blue-banner a {
+    font-size: 12px !important;
+    padding: 9px 5px !important;
+  }
+
+  .form-section input[type=text], input[type=number], input[type=email] {
+    font-size: 11px !important;
+    border-radius: 6px !important;
+    margin: 3px !important;
+    padding: 9px !important;
+  }
+
+  .column__container {
+    width: 100% !important;
+  }
+  .pages__container {
+    width: 100% !important;
+  }
+  .pages__container a {
+    left: 25% !important;
+    top: 31% !important;
+    font-size: 23px !important;
+    width: 92px !important;
   }
 
   .site-footer {
-    grid-template-columns: auto;
+    padding: 30px 5% !important;
+  }
+}
+
+@media (min-width: 521px) and (max-width: 700px) {
+  .blue-banner a {
+    font-size: 19px !important;
+    padding: 9px 5px !important;
+  }
+  .form-section input[type=text], input[type=number], input[type=email] {
+    font-size: 18px !important;
+    border-radius: 8px !important;
+    padding: 15px !important;
+    margin: 3px !important;
+  }
+  .column__container {
+    width: 100% !important;
+  }
+  .pages__container {
+    width: 45% !important;
+  }
+  .pages__container a {
+    left: 16% !important;
+    top: 31% !important;
+    font-size: 19px !important;
+    padding: 13px 20px !important;
+    width: 91px !important;
+  }
+
+}
+
+@media (min-width: 701px) and (max-width: 1000px) {
+  .form-section input[type=text], input[type=number], input[type=email] {
+    font-size: 18px !important;
+    border-radius: 8px !important;
+    padding: 15px !important;
+    margin: 3px !important;
+  }
+  .blue-banner a {
+    font-size: 26px !important;
+    padding: 9px 5px !important;
+  }
+  .column__container {
+    width: 50% !important;
+  }
+  .pages__container {
+    width: 43% !important;
+  }
+  .pages__container a {
+    left: 16% !important;
+    top: 35% !important;
+    font-size: 19px !important;
+    padding: 13px 20px !important;
+    width: 160px !important;
+  }
+}
+
+@media (min-width: 1001px)  and (max-width: 1300px) {
+  .blue-banner a {
+    font-size: 37px !important;
+    padding: 9px 5px !important;
+  }
+}
+
+@media (max-width: 1500px) {
+  .half-width-section {
+    /* grid-template-columns: auto !important; */
+  }
+
+  .site-footer {
+    /* grid-template-columns: auto; */
   }
 }
 
@@ -363,11 +507,16 @@ body {
   font-size: 1.5em;
 }
 
+.blue-banner img {
+  margin-top: -13%;
+  margin-bottom: -13%;
+}
+
 .blue-banner a {
   background-color: #C81639;
   color: #fff;
   padding: 20px 30px;
-  font-size: 44px;
+  font-size: 32px;
   font-family: futura light;
   border-radius: 11px;
   border-style: none;
@@ -375,13 +524,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0px 7%;
 }
 
 #submit-order {
   background-color: #C81639;
   color: #fff;
-  padding: 20px 30px;
-  font-size: 44px;
+  padding: 11px 30px;
+  font-size: 32px;
   font-family: futura light;
   border-radius: 11px;
   border-style: none;
@@ -410,12 +560,24 @@ body {
 .blue-banner-2 {
   background-color: #203567;
   color: #fff;
-  padding: 20px 6% 84px;
+  padding: 20px 15% 30px;
   text-align: center;
 }
 
 .blue-banner-2 h2 {
-  font-size: 70px;
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.r-class {
+  font-style: inherit;
+  font-size: 40px;
+  padding-right: 13px;
+}
+
+.site-footer ul {
+  padding-left: 0px;
 }
 
 .blue-banner-2 p {
@@ -424,11 +586,11 @@ body {
 
 .pages__container {
   position: relative;
-  margin: 30px;
+  margin: 20px;
 }
 
 .pages__container img {
-  max-width: 415px;
+  max-width: 345px;
 }
 
 .pages__container a {
@@ -444,7 +606,7 @@ body {
   border-style: none;
   margin: auto;
   top: 40%;
-  width: 300px;
+  width: 228px;
 }
 
 .blue-background {
@@ -473,9 +635,10 @@ body {
 }
 
 #order-form h2 {
-  font-size: 50px;
+  font-size: 40px;
   font-family: futura light;
   font-weight: 500;
+  padding: 0px 12px;
 }
 
 .form-section .full-width {
@@ -502,10 +665,10 @@ body {
 }
 
 .form-section input[type=text], input[type=email], input[type=number] {
-  padding: 34px;
+  padding: 23px;
   margin: 11px;
   border-style: solid;
   border-radius: 16px;
   border-color: #000;
-  font-size: 41px;
+  font-size: 26px;
 }

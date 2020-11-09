@@ -65,8 +65,8 @@ if ( ! function_exists( 'send_mail' ) ) :
 	
 			$base_url = get_site_url();
 	
-			$body = str_replace('[[Name]]', $name, $emails[0]->post_content);
-			$body = str_replace('[[BaseUrl]]', $base_url, $body);
+			$body = str_replace('##Name##', $name, $emails[0]->post_content);
+			$body = str_replace('##BaseUrl##', $base_url, $body);
 	
 			$email_sent = wp_mail($email, 'Thank You for your Order', $body, $headers);
 
@@ -77,10 +77,10 @@ if ( ! function_exists( 'send_mail' ) ) :
 				], 200);
 				// wp_safe_redirect('/thank-you/');
 			} else {
-				wp_send_json([
+				wp_send_json_error([
 					'status' => 'success',
 					'error_message' => 'Failed To Send Email'
-				], 200);
+				]);
 			}
 		} catch (\Exception $e) {
 			wp_send_json([
