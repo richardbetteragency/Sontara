@@ -58,8 +58,25 @@ if ( ! function_exists( 'send_mail' ) ) :
 				'post_type' => 'emails',
 				'post_name' => 'thank-you-email' 
 			];
+
+			$admin_message = '<p><strong>Name: </strong> ' . $name . '</p>';
+			$admin_message .= '<p><strong>Email: </strong> ' . $email . '</p>';
+			$admin_message .= '<p><strong>Company: </strong> ' . $company . '</p>';
+			$admin_message .= '<p><strong>Telephone: </strong> ' . $telephone . '</p>';
+			$admin_message .= '<br>';
+			$admin_message .= '<h2>Address:</h2>';
+			$admin_message .= '<p><strong>Address Line 1: </strong> ' . $addressline1 . '</p>';
+			$admin_message .= '<p><strong>Address Line 2: </strong> ' . $addressline2 . '</p>';
+			$admin_message .= '<p><strong>City: </strong> ' . $city . '</p>';
+			$admin_message .= '<p><strong>County: </strong> ' . $county . '</p>';
+			$admin_message .= '<p><strong>Country: </strong> ' . $country . '</p>';
+			$admin_message .= '<p><strong>Post Code: </strong> ' . $postcode . '</p>';
+
+			$admin_headers = array('Content-Type: text/html; charset=UTF-8');
+
+			wp_mail('marketing@harrisonwipes.co.uk', 'More thank Just a wipe order placed', $admin_message, $admin_headers);
 	
-			$headers = array('Content-Type: text/html; charset=UTF-8');
+			$headers = array('Content-Type: text/html; charset=UTF-8', 'From: Harrison Wipes marketing@harrisonwipes.co.uk');
 			
 			$emails = get_posts($email_args);
 	
