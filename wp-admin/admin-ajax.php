@@ -143,7 +143,15 @@ $core_actions_post = array(
 );
 
 // Deprecated.
-$core_actions_post_deprecated = array( 'wp-fullscreen-save-post', 'press-this-save-post', 'press-this-add-category' );
+$core_actions_post_deprecated = array(
+	'wp-fullscreen-save-post',
+	'press-this-save-post',
+	'press-this-add-category',
+	'health-check-dotorg-communication',
+	'health-check-is-in-debug-mode',
+	'health-check-background-updates',
+	'health-check-loopback-requests',
+);
 $core_actions_post            = array_merge( $core_actions_post, $core_actions_post_deprecated );
 
 // Register core Ajax calls.
@@ -161,7 +169,6 @@ $action = ( isset( $_REQUEST['action'] ) ) ? $_REQUEST['action'] : '';
 
 if ( is_user_logged_in() ) {
 	// If no action is registered, return a Bad Request response.
-
 	if ( ! has_action( "wp_ajax_{$action}" ) ) {
 		wp_die( '0', 400 );
 	}
@@ -177,7 +184,6 @@ if ( is_user_logged_in() ) {
 	do_action( "wp_ajax_{$action}" );
 } else {
 	// If no action is registered, return a Bad Request response.
-
 	if ( ! has_action( "wp_ajax_nopriv_{$action}" ) ) {
 		wp_die( '0', 400 );
 	}

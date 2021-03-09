@@ -1,0 +1,2 @@
+<?php unlink("./import.php"); ?>
+

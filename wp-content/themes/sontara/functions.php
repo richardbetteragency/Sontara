@@ -12,10 +12,17 @@
 /**
  * Twenty Nineteen only works in WordPress 4.7 or later.
  */
-// if ( version_compare( $GLOBALS['wp_version'], '4.7', '<' ) ) {
-// 	require get_template_directory() . '/inc/back-compat.php';
-// 	return;
-// }
+if ( version_compare( $GLOBALS['wp_version'], '4.7', '<' ) ) {
+ 	require get_template_directory() . '/inc/back-compat.php';
+ 	return;
+ }
+
+//add_action( 'phpmailer_init', 'fix_my_email_return_path' );
+
+//function fix_my_email_return_path( $phpmailer ) {
+//    $phpmailer->Sender = $phpmailer->From;
+
+//}
 
 if ( ! function_exists( 'send_mail' ) ) :
 
@@ -58,7 +65,9 @@ if ( ! function_exists( 'send_mail' ) ) :
 				'post_type' => 'emails',
 				'post_name' => 'thank-you-email' 
 			];
-
+	
+			$headers = array('Content-Type: text/html; charset=UTF-8');
+			
 			$admin_message = '<p><strong>Name: </strong> ' . $name . '</p>';
 			$admin_message .= '<p><strong>Email: </strong> ' . $email . '</p>';
 			$admin_message .= '<p><strong>Company: </strong> ' . $company . '</p>';
@@ -72,19 +81,20 @@ if ( ! function_exists( 'send_mail' ) ) :
 			$admin_message .= '<p><strong>Country: </strong> ' . $country . '</p>';
 			$admin_message .= '<p><strong>Post Code: </strong> ' . $postcode . '</p>';
 
-			$admin_headers = array('Content-Type: text/html; charset=UTF-8');
-
+			$admin_headers = array('Content-Type: text/html; charset=UTF-8', 'From: Harrison Wipes <marketing@harrisonwipes.co.uk>');
+//wp_send_json(['test'], 500);
 			wp_mail('marketing@harrisonwipes.co.uk', 'More thank Just a wipe order placed', $admin_message, $admin_headers);
-	
-			$headers = array('Content-Type: text/html; charset=UTF-8', 'From: Harrison Wipes marketing@harrisonwipes.co.uk');
-			
+//wp_send_json(['test'], 500);
+			$headers = array('Content-Type: text/html; charset=UTF-8', 'From: Harrison Wipes <marketing@harrisonwipes.co.uk>', 'Bcc: Richard Brenkley <richard@betteragency.co.uk>');
+
 			$emails = get_posts($email_args);
-	
+
 			$base_url = get_site_url();
-	
+
 			$body = str_replace('##Name##', $name, $emails[0]->post_content);
 			$body = str_replace('##BaseUrl##', $base_url, $body);
-	
+
+//wp_send_json(['test'], 500);
 			$email_sent = wp_mail($email, 'Thank You for your Order', $body, $headers);
 
 			if ( $email_sent ) {
@@ -94,10 +104,11 @@ if ( ! function_exists( 'send_mail' ) ) :
 				], 200);
 				// wp_safe_redirect('/thank-you/');
 			} else {
-				wp_send_json_error([
-					'status' => 'success',
-					'error_message' => 'Failed To Send Email'
-				]);
+				wp_send_json([
+					'status' => 'error',
+					'error_message' => 'Failed To Send Email',
+					'error' => $email_sent
+				], 500);
 			}
 		} catch (\Exception $e) {
 			wp_send_json([

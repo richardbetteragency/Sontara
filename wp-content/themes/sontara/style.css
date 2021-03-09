@@ -1,3 +1,4 @@
+
 @font-face {
   font-family:'futura light';
   src: url("fonts/futura light bt.ttf");
@@ -45,6 +46,12 @@ body {
 .content__section h2 {
   font-size: 32px;
   font-family: 'futura medium';
+  color: #203567;
+}
+
+.content__section h3 {  
+  font-size: 26px;  
+  font-family: 'futura medium';  
   color: #203567;
 }
 
@@ -153,7 +160,15 @@ body {
 }
 
 .column__container img {
-  width: 24%;
+  width: 37%;
+}
+
+.content__section hr {
+  border-bottom-color: #000;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  width: 100%;
+  margin-bottom: 80px;
 }
 
 .flex {
@@ -172,9 +187,10 @@ body {
 }
 
 .column__container {
-  width: 33%;
+  width: 28%;
   /* min-width: 391px; */
   margin-bottom: 40px;
+  padding: 0px 2%;
 }
 
 .content__section ul {
@@ -268,6 +284,9 @@ body {
 }
 
 @media (max-width: 1000px) {
+  .content__section {
+    padding: 75px 12% !important;
+  }
   .blue-banner-2 {
     padding: 20px 5% 30px !important;
   }
@@ -487,8 +506,14 @@ body {
 
 @media (min-width: 1001px)  and (max-width: 1300px) {
   .blue-banner a {
-    font-size: 37px !important;
+    font-size: 27px !important;
     padding: 9px 5px !important;
+  }
+  .column__container {
+    width: 45% !important;
+  }
+  .content__section {
+    padding: 75px 12%;
   }
 }
 
@@ -572,8 +597,10 @@ body {
 
 .r-class {
   font-style: inherit;
-  font-size: 40px;
-  padding-right: 13px;
+  font-size: 27px;
+  padding-right: 6px;
+  top: -7px;
+  position: relative;
 }
 
 .site-footer ul {

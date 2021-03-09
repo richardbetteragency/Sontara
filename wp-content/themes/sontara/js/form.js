@@ -65,6 +65,7 @@ $(document).ready(function() {
                 a
             )
             .done(function(e) {
+console.log(e)
                 window.location.replace('/thank-you/')
             })
             .fail(function(e) {

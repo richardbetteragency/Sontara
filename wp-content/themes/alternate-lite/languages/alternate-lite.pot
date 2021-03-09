@@ -1,0 +1,173 @@
+# Copyright (C) 2019 Viva Themes
+# This file is distributed under the GNU GPLv3.
+msgid ""
+msgstr ""
+"Project-Id-Version: Alternate Lite 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/alternate-lite\n"
+"POT-Creation-Date: 2019-05-09 10:57:22+00:00\n"
+"MIME-Version: 1.0.2\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2019-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: 404.php:13
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: archive.php:25
+msgid "Not Found"
+msgstr ""
+
+#. translators: %s: post title
+
+#: comments.php:21
+msgctxt "comments title"
+msgid "One Reply to &ldquo;%s&rdquo;"
+msgstr ""
+
+#. translators: 1: number of comments, 2: post title
+
+#: comments.php:25
+msgctxt "comments title"
+msgid "%1$s Reply to &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s Replies to &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:46
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:49
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:52
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:62
+msgid "Comments are closed."
+msgstr ""
+
+#: footer.php:39
+msgid "Y"
+msgstr ""
+
+#: footer.php:41
+msgid "http://wordpress.org/"
+msgstr ""
+
+#: footer.php:41
+msgid "Powered by %s."
+msgstr ""
+
+#: footer.php:41
+msgid "Theme by %1$s."
+msgstr ""
+
+#: functions.php:18
+msgid "Main Menu"
+msgstr ""
+
+#: functions.php:19
+msgid "Social Menu"
+msgstr ""
+
+#: functions.php:32
+msgid "Left Sidebar"
+msgstr ""
+
+#: functions.php:34
+msgid "Left sidebar, drag and drop widgets from the left"
+msgstr ""
+
+#: functions.php:42
+msgid "Bottom Widgets"
+msgstr ""
+
+#: functions.php:44
+msgid "Widgets in the bottom, drag and drop widgets from the left"
+msgstr ""
+
+#. translators: If there are characters in your language that are not supported
+#. by Open Sans, translate this to 'off'. Do not translate into your own
+#. language.
+
+#: functions.php:65
+msgctxt "Open Sans font: on or off"
+msgid "on"
+msgstr ""
+
+#. translators: To add an additional Open Sans character subset specific to
+#. your language, translate this to 'greek', 'cyrillic' or 'vietnamese'. Do not
+#. translate into your own language.
+
+#: functions.php:71
+msgctxt "Open Sans font: add new subset (greek, cyrillic, vietnamese)"
+msgid "no-subset"
+msgstr ""
+
+#: inc/extras.php:32 inc/extras.php:41
+msgid "Read More"
+msgstr ""
+
+#: inc/extras.php:67
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: inc/extras.php:69
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: inc/extras.php:71
+msgctxt "daily archives date format"
+msgid "F j, Y"
+msgstr ""
+
+#: inc/extras.php:77
+msgid "Archives"
+msgstr ""
+
+#: inc/extras.php:89
+msgid "Thanks for installing Alternate Lite! Want more features?"
+msgstr ""
+
+#: inc/extras.php:89
+msgid "Check out the Pro Version  &#8594;"
+msgstr ""
+
+#: index.php:24
+msgid "You don&#39;t have any posts yet."
+msgstr ""
+
+#: page.php:23 single.php:22
+msgid "Pages:"
+msgstr ""
+
+#: search.php:12
+msgid "Search Results for: %s"
+msgstr ""
+#. Theme Name of the plugin/theme
+msgid "Alternate Lite"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "http://www.vivathemes.com/wordpress-theme/alternate/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Alternate Lite is a clean, minimal and simple blog theme. In the front page you can display your blog or a static page. Add links to your Social media accounts easily with the integrated Social Media menu. Alternate Lite comes loaded with 28 social media icons to have your visitors connect to you. Easily upload your logo image and favicon, styling for Contact Form 7 plugin are among the features. For even more features check the Pro Version of this theme https://www.vivathemes.com/wordpress-theme/alternate/"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Viva Themes"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://www.vivathemes.com"
+msgstr ""
